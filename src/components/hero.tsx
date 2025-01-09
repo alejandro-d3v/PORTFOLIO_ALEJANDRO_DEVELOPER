@@ -8,16 +8,16 @@ import IconApp from '@/components/icon-app';
 export default function Hero() {
   return (
     <div className="flex justify-between items-center h-screen bg-secondary-500 px-60 gap-[3.75rem]">
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center text-center md:text-left">
         <h3 className="text-5xl text-white">Hola, soy</h3>
         <h1 className="text-7xl font-bold text-primary-500">Alejandro Carvajal</h1>
         <h3 className="text-5xl text-white">Desarrollador Front-End</h3>
 
         <p className="text-xl text-white my-10">
-          Tengo más de 2 años de experiencia en el desarrollo de aplicaciones web interactivas y optimizadas, trabajando con tecnologías modernas.
+          Tengo 3 años de experiencia en el desarrollo de aplicaciones web interactivas y optimizadas, trabajando con tecnologías modernas.
         </p>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
           <Link href="https://github.com/alejandro-d3v" target="_blank">
             <IconApp name="github" className="scale-[1.5]" size="w-8 text-white hover:text-primary-500 transition-colors" />
           </Link>
