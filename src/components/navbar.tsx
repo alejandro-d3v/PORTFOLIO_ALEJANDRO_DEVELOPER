@@ -20,16 +20,29 @@ const Navbar = () => {
         alt="Logo"
         width={150}
         height={100}
-        className="w-32 sm:w-36 md:w-40 lg:w-48"
+        className="w-24 md:w-36 lg:w-40"
       />
 
-      <button 
-        onClick={toggleMenu}
-        className="md:hidden flex items-center space-x-2"
-        aria-label="Toggle menu"
-      >
-        <IconApp name="menu-fold-left" className="scale-[1.5]" size="w-8 text-white hover:text-primary-500 transition-colors" />
-      </button>
+      <div className="flex items-center gap-4">
+        {/* CV mobile */}
+        <Link 
+          href="https://bucket-alejandro-dev.s3.us-east-1.amazonaws.com/static/cv_alejandro_carvajal.docx.pdf"
+          target="_blank"
+          className="md:hidden"
+        >
+          <button className="bg-primary-500 text-white px-3 py-1 rounded-md">
+            CV
+          </button>
+        </Link>
+
+        <button 
+          onClick={toggleMenu}
+          className="md:hidden flex items-center space-x-2"
+          aria-label="Toggle menu"
+        >
+          <IconApp name="menu-fold-left" className="scale-[1.5]" size="w-8 text-white hover:text-primary-500 transition-colors" />
+        </button>
+      </div>
 
       {/* Menú desplegable */}
       <MobileMenu isOpen={ isOpen } toggleMenu={ toggleMenu } />
@@ -42,9 +55,14 @@ const Navbar = () => {
           <Link href="/">Blog</Link>
           <Link href="/">Contacto</Link>
 
-          <button className="bg-primary-500 text-white px-4 py-2 rounded-md">
-            CV
-          </button>
+          <Link 
+            href="https://bucket-alejandro-dev.s3.us-east-1.amazonaws.com/static/cv_alejandro_carvajal.docx.pdf"
+            target="_blank"
+          >
+            <button className="bg-primary-500 text-white px-4 py-2 rounded-md">
+              CV
+            </button>
+          </Link>
         </div>
       </div>
     </nav>
